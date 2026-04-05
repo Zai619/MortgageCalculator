@@ -34,23 +34,26 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtLoanRate = new System.Windows.Forms.TextBox();
+            this.txtLoanLimit = new System.Windows.Forms.TextBox();
+            this.txtGracePeriod = new System.Windows.Forms.TextBox();
             this.txtSelfFund = new System.Windows.Forms.TextBox();
             this.txtTotalLoan = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtInGrace = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtFirstInterest = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtFirstPrincipal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtTotalInterest = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtTotalPay = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRun = new System.Windows.Forms.Button();
+            this.txtOutGrace = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -111,26 +114,28 @@
             this.txtTotalPrice.TabIndex = 5;
             this.txtTotalPrice.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // txtLoanRate
             // 
-            this.textBox2.Location = new System.Drawing.Point(260, 193);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(242, 25);
-            this.textBox2.TabIndex = 6;
+            this.txtLoanRate.Location = new System.Drawing.Point(260, 193);
+            this.txtLoanRate.Name = "txtLoanRate";
+            this.txtLoanRate.Size = new System.Drawing.Size(242, 25);
+            this.txtLoanRate.TabIndex = 6;
             // 
-            // textBox3
+            // txtLoanLimit
             // 
-            this.textBox3.Location = new System.Drawing.Point(260, 280);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(242, 25);
-            this.textBox3.TabIndex = 7;
+            this.txtLoanLimit.Location = new System.Drawing.Point(260, 280);
+            this.txtLoanLimit.Name = "txtLoanLimit";
+            this.txtLoanLimit.Size = new System.Drawing.Size(242, 25);
+            this.txtLoanLimit.TabIndex = 7;
+            this.txtLoanLimit.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
-            // textBox4
+            // txtGracePeriod
             // 
-            this.textBox4.Location = new System.Drawing.Point(260, 337);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(242, 25);
-            this.textBox4.TabIndex = 8;
+            this.txtGracePeriod.Location = new System.Drawing.Point(260, 337);
+            this.txtGracePeriod.Name = "txtGracePeriod";
+            this.txtGracePeriod.Size = new System.Drawing.Size(242, 25);
+            this.txtGracePeriod.TabIndex = 8;
+            this.txtGracePeriod.TextChanged += new System.EventHandler(this.txtGracePeriod_TextChanged);
             // 
             // txtSelfFund
             // 
@@ -157,12 +162,13 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "貸款總金額";
             // 
-            // textBox7
+            // txtInGrace
             // 
-            this.textBox7.Location = new System.Drawing.Point(990, 122);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(242, 25);
-            this.textBox7.TabIndex = 15;
+            this.txtInGrace.Location = new System.Drawing.Point(990, 193);
+            this.txtInGrace.Name = "txtInGrace";
+            this.txtInGrace.Size = new System.Drawing.Size(242, 25);
+            this.txtInGrace.TabIndex = 15;
+            this.txtInGrace.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // label7
             // 
@@ -175,107 +181,139 @@
             this.label7.Text = "每月應繳金額 (本 + 息)";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // textBox8
+            // txtFirstInterest
             // 
-            this.textBox8.Location = new System.Drawing.Point(980, 197);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(242, 25);
-            this.textBox8.TabIndex = 17;
+            this.txtFirstInterest.Location = new System.Drawing.Point(980, 373);
+            this.txtFirstInterest.Name = "txtFirstInterest";
+            this.txtFirstInterest.Size = new System.Drawing.Size(242, 25);
+            this.txtFirstInterest.TabIndex = 17;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label8.Location = new System.Drawing.Point(756, 193);
+            this.label8.Location = new System.Drawing.Point(756, 369);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(151, 33);
             this.label8.TabIndex = 16;
             this.label8.Text = "首期利息";
             // 
-            // textBox9
+            // txtFirstPrincipal
             // 
-            this.textBox9.Location = new System.Drawing.Point(990, 273);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(242, 25);
-            this.textBox9.TabIndex = 19;
+            this.txtFirstPrincipal.Location = new System.Drawing.Point(990, 449);
+            this.txtFirstPrincipal.Name = "txtFirstPrincipal";
+            this.txtFirstPrincipal.Size = new System.Drawing.Size(242, 25);
+            this.txtFirstPrincipal.TabIndex = 19;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.Location = new System.Drawing.Point(766, 269);
+            this.label9.Location = new System.Drawing.Point(766, 445);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(151, 33);
             this.label9.TabIndex = 18;
             this.label9.Text = "首期本金";
             // 
-            // textBox10
+            // txtTotalInterest
             // 
-            this.textBox10.Location = new System.Drawing.Point(980, 353);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(242, 25);
-            this.textBox10.TabIndex = 21;
+            this.txtTotalInterest.Location = new System.Drawing.Point(980, 529);
+            this.txtTotalInterest.Name = "txtTotalInterest";
+            this.txtTotalInterest.Size = new System.Drawing.Size(242, 25);
+            this.txtTotalInterest.TabIndex = 21;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label10.Location = new System.Drawing.Point(756, 349);
+            this.label10.Location = new System.Drawing.Point(756, 525);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(185, 33);
             this.label10.TabIndex = 20;
             this.label10.Text = "總利息支出";
             // 
-            // textBox11
+            // txtTotalPay
             // 
-            this.textBox11.Location = new System.Drawing.Point(980, 412);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(242, 25);
-            this.textBox11.TabIndex = 23;
+            this.txtTotalPay.Location = new System.Drawing.Point(980, 588);
+            this.txtTotalPay.Name = "txtTotalPay";
+            this.txtTotalPay.Size = new System.Drawing.Size(242, 25);
+            this.txtTotalPay.TabIndex = 23;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label11.Location = new System.Drawing.Point(756, 408);
+            this.label11.Location = new System.Drawing.Point(756, 584);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(185, 33);
             this.label11.TabIndex = 22;
             this.label11.Text = "總還款金額";
             // 
-            // button1
+            // btnRun
             // 
-            this.button1.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(578, 158);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 115);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "計算";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRun.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnRun.Location = new System.Drawing.Point(578, 158);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(140, 115);
+            this.btnRun.TabIndex = 24;
+            this.btnRun.Text = "計算";
+            this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            // 
+            // txtOutGrace
+            // 
+            this.txtOutGrace.Location = new System.Drawing.Point(990, 280);
+            this.txtOutGrace.Name = "txtOutGrace";
+            this.txtOutGrace.Size = new System.Drawing.Size(242, 25);
+            this.txtOutGrace.TabIndex = 25;
+            this.txtOutGrace.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label12.Location = new System.Drawing.Point(766, 193);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(151, 33);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "寬限期內";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label13.Location = new System.Drawing.Point(779, 280);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(151, 33);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "寬限期後";
             // 
             // mortgageCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1244, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox11);
+            this.ClientSize = new System.Drawing.Size(1311, 675);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtOutGrace);
+            this.Controls.Add(this.btnRun);
+            this.Controls.Add(this.txtTotalPay);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.txtTotalInterest);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtFirstPrincipal);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtFirstInterest);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtInGrace);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtTotalLoan);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtSelfFund);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtGracePeriod);
+            this.Controls.Add(this.txtLoanLimit);
+            this.Controls.Add(this.txtLoanRate);
             this.Controls.Add(this.txtTotalPrice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -283,7 +321,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "mortgageCalculator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "房貸計算器";
+            this.Click += new System.EventHandler(this.mortgageCalculator_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,23 +337,26 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTotalPrice;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtLoanRate;
+        private System.Windows.Forms.TextBox txtLoanLimit;
+        private System.Windows.Forms.TextBox txtGracePeriod;
         private System.Windows.Forms.TextBox txtSelfFund;
         private System.Windows.Forms.TextBox txtTotalLoan;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtInGrace;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtFirstInterest;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtFirstPrincipal;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtTotalInterest;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtTotalPay;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRun;
+        private System.Windows.Forms.TextBox txtOutGrace;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }
 
