@@ -6,4 +6,5 @@
 
 
 這是有寬限期的計算結果
-<img width="1216" height="699" alt="image" src="https://github.com/user-attachments/assets/77d399d1-6732-4504-a08d-d3f926ea1f53" />
+<img width="1208" height="693" alt="image" src="https://github.com/user-attachments/assets/dc05fc4f-9cce-447b-8437-9e4927fc63bb" />
+
