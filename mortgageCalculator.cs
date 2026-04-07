@@ -44,6 +44,33 @@ namespace s1131426房貸計算器
 
         private void btnRun_Click(object sender, EventArgs e)
         {
+
+            if (this.txtGracePeriod.Text == "" || double.Parse(this.txtGracePeriod.Text) < 0 )
+            {
+                MessageBox.Show("寬限期須大於等於零", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (this.txtLoanLimit.Text == "" || double.Parse(this.txtLoanLimit.Text) <= 0 || double.Parse(this.txtLoanLimit.Text) < double.Parse(this.txtGracePeriod.Text))
+            {
+                MessageBox.Show("貸款年限須大於零", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (this.txtTotalPrice.Text == "" || double.Parse(this.txtTotalPrice.Text) <= 0 )
+            {
+                MessageBox.Show("價格必須大於零", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (this.txtSelfFund.Text == "" || double.Parse(this.txtSelfFund.Text) < 0 || double.Parse(this.txtSelfFund.Text) > 100)
+            {
+                MessageBox.Show("自備款比例需介於0-100", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (this.txtLoanRate.Text == "" || double.Parse(this.txtLoanRate.Text) < 0 || double.Parse(this.txtLoanRate.Text) > 100)
+            {
+                MessageBox.Show("貸款利率需介於0-100", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             var grace = double.Parse(this.txtGracePeriod.Text)*12.0;
             var totalPrice = double.Parse(this.txtTotalPrice.Text);
             var selfFund = double.Parse(this.txtSelfFund.Text) / 100.0;

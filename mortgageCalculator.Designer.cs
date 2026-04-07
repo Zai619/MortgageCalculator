@@ -276,7 +276,7 @@
             // btnRun
             // 
             this.btnRun.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnRun.Location = new System.Drawing.Point(578, 158);
+            this.btnRun.Location = new System.Drawing.Point(598, 158);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(140, 115);
             this.btnRun.TabIndex = 24;
