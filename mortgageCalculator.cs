@@ -16,6 +16,8 @@ namespace s1131426房貸計算器
         {
             InitializeComponent();
             this.txtGracePeriod.Text = "0";
+            this.txtMonthPay.Visible = false;
+            this.label21.Visible = false;
         }
 
 
@@ -46,37 +48,46 @@ namespace s1131426房貸計算器
             var totalPrice = double.Parse(this.txtTotalPrice.Text);
             var selfFund = double.Parse(this.txtSelfFund.Text) / 100.0;
             var totalLoan = totalPrice * (1.0 - selfFund);
-            this.txtTotalLoan.Text = (totalLoan).ToString();
+            this.txtTotalLoan.Text = (Math.Round(totalLoan, 2)).ToString("N");
 
 
             var month = double.Parse(this.txtLoanLimit.Text) * 12;
             var rate = double.Parse(this.txtLoanRate.Text) / 100.0 / 12.0;
-
+ 
             if (grace > 0)
             {
-                this.txtInGrace.Text = (totalLoan*rate).ToString();
+
+
+                this.txtInGrace.Text = (Math.Round(totalLoan * rate, 2)).ToString("N");
                 month -= grace;
                 var MonthPay = totalLoan * rate * Math.Pow(1 + rate, month) / (Math.Pow(1 + rate, month) - 1);
-                this.txtOutGrace.Text = (MonthPay).ToString();
+                this.txtOutGrace.Text = (Math.Round(MonthPay, 2)).ToString("N");
                 var firstInterest = totalLoan * rate;
-                this.txtFirstInterest.Text = (firstInterest).ToString();
+                this.txtFirstInterest.Text = (Math.Round(firstInterest, 2)).ToString("N");
 
                 this.txtFirstPrincipal.Text = "0";
-                this.txtTotalPay.Text = (MonthPay * month + totalLoan * rate * grace).ToString();
-                this.txtTotalInterest.Text = (MonthPay * month + totalLoan * rate * grace - totalLoan).ToString();
+                this.txtTotalPay.Text = (Math.Round(MonthPay * month + totalLoan * rate * grace, 2)).ToString("N");
+                this.txtTotalInterest.Text = (Math.Round(MonthPay * month + totalLoan * rate * grace - totalLoan, 2)).ToString("N");
             }
             else
             {
+                this.txtMonthPay.Visible = true;
+                this.label21.Visible = true;
                 this.txtInGrace.Visible = false;
-                var MonthPay = totalLoan * rate * Math.Pow(1 + rate, month) / (Math.Pow(1 + rate, month) - 1);
-                this.txtOutGrace.Text = (MonthPay).ToString();
-                this.txtInGrace.Text = "0";
-                var firstInterest = totalLoan * rate;
-                this.txtFirstInterest.Text = (firstInterest).ToString();
+                this.txtOutGrace.Visible = false;
+                this.label12.Visible = false;
+                this.label13.Visible = false;
+                this.label19.Visible = false;
+                this.label20.Visible = false;
 
-                this.txtFirstPrincipal.Text = (MonthPay - firstInterest).ToString();
-                this.txtTotalPay.Text = (MonthPay * month).ToString();
-                this.txtTotalInterest.Text = (MonthPay * month - totalLoan).ToString();
+                var MonthPay = totalLoan * rate * Math.Pow(1 + rate, month) / (Math.Pow(1 + rate, month) - 1);
+                this.txtMonthPay.Text = (Math.Round(MonthPay, 2)).ToString("N");
+                var firstInterest = totalLoan * rate;
+                this.txtFirstInterest.Text = (Math.Round(firstInterest,2)).ToString("N");
+
+                this.txtFirstPrincipal.Text = (Math.Round(MonthPay - firstInterest,2)).ToString("N");
+                this.txtTotalPay.Text = (Math.Round(MonthPay * month,2)).ToString("N");
+                this.txtTotalInterest.Text = (Math.Round(MonthPay * month - totalLoan,2)).ToString("N");
             }
 
 
@@ -152,6 +163,46 @@ namespace s1131426房貸計算器
         }
 
         private void txtTotalPay_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mortgageCalculator_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
         {
 
         }

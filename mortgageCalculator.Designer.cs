@@ -55,6 +55,20 @@
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.txtMonthPay = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -179,7 +193,7 @@
             // 
             this.txtInGrace.Location = new System.Drawing.Point(232, 58);
             this.txtInGrace.Name = "txtInGrace";
-            this.txtInGrace.Size = new System.Drawing.Size(242, 47);
+            this.txtInGrace.Size = new System.Drawing.Size(231, 47);
             this.txtInGrace.TabIndex = 15;
             this.txtInGrace.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
@@ -274,7 +288,7 @@
             // 
             this.txtOutGrace.Location = new System.Drawing.Point(232, 122);
             this.txtOutGrace.Name = "txtOutGrace";
-            this.txtOutGrace.Size = new System.Drawing.Size(242, 47);
+            this.txtOutGrace.Size = new System.Drawing.Size(231, 47);
             this.txtOutGrace.TabIndex = 25;
             this.txtOutGrace.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
@@ -301,6 +315,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label21);
+            this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.txtMonthPay);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.txtInGrace);
@@ -313,11 +331,165 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "每月應繳金額 (本 + 息)";
             // 
+            // txtMonthPay
+            // 
+            this.txtMonthPay.Location = new System.Drawing.Point(133, 85);
+            this.txtMonthPay.Name = "txtMonthPay";
+            this.txtMonthPay.Size = new System.Drawing.Size(242, 47);
+            this.txtMonthPay.TabIndex = 28;
+            this.txtMonthPay.TextChanged += new System.EventHandler(this.textBox1_TextChanged_2);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label7.Location = new System.Drawing.Point(523, 48);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 33);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "TWD";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label14.Location = new System.Drawing.Point(1237, 48);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(66, 33);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "TWD";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label15.Location = new System.Drawing.Point(1237, 122);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(66, 33);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "TWD";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label16.Location = new System.Drawing.Point(1237, 203);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(66, 33);
+            this.label16.TabIndex = 32;
+            this.label16.Text = "TWD";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label17.Location = new System.Drawing.Point(1237, 279);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(66, 33);
+            this.label17.TabIndex = 33;
+            this.label17.Text = "TWD";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label18.Location = new System.Drawing.Point(1237, 347);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(66, 33);
+            this.label18.TabIndex = 34;
+            this.label18.Text = "TWD";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label19.Location = new System.Drawing.Point(467, 66);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(66, 33);
+            this.label19.TabIndex = 35;
+            this.label19.Text = "TWD";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label20.Location = new System.Drawing.Point(467, 130);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(66, 33);
+            this.label20.TabIndex = 35;
+            this.label20.Text = "TWD";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label21.Location = new System.Drawing.Point(381, 88);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(66, 33);
+            this.label21.TabIndex = 35;
+            this.label21.Text = "TWD";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label22.Location = new System.Drawing.Point(523, 347);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(49, 33);
+            this.label22.TabIndex = 35;
+            this.label22.Text = "年";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label23.Location = new System.Drawing.Point(523, 279);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(49, 33);
+            this.label23.TabIndex = 36;
+            this.label23.Text = "年";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label24.Location = new System.Drawing.Point(523, 199);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(32, 33);
+            this.label24.TabIndex = 37;
+            this.label24.Text = "%";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label25.Location = new System.Drawing.Point(523, 122);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(32, 33);
+            this.label25.TabIndex = 38;
+            this.label25.Text = "%";
+            // 
             // mortgageCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1311, 675);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.label24);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnRun);
             this.Controls.Add(this.txtTotalPay);
@@ -343,6 +515,7 @@
             this.Name = "mortgageCalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "房貸計算器";
+            this.Load += new System.EventHandler(this.mortgageCalculator_Load);
             this.Click += new System.EventHandler(this.mortgageCalculator_Click);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -380,6 +553,20 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.TextBox txtMonthPay;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
     }
 }
 
