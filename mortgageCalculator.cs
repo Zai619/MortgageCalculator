@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace s1131426房貸計算器
 {
     public partial class mortgageCalculator : Form
     {
+        [DllImport("user32.dll", CharSet = CharSet.Unicode)]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, string lParam);
+        public const int EM_SETCUEBANNER = 0x1501;
         public mortgageCalculator()
         {
             InitializeComponent();
@@ -44,7 +48,37 @@ namespace s1131426房貸計算器
 
         private void btnRun_Click(object sender, EventArgs e)
         {
+            bool a = Double.TryParse(this.txtGracePeriod.Text, out double da);
+            bool b = Double.TryParse(this.txtLoanLimit.Text, out double dH);
+            bool c = Double.TryParse(this.txtTotalPrice.Text, out double db);
+            bool d = Double.TryParse(this.txtSelfFund.Text, out double dc);
+            bool ee = Double.TryParse(this.txtLoanRate.Text, out double dd);
 
+            if (!a)
+            {
+                MessageBox.Show("請輸入有效寬限期", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!b)
+            {
+                MessageBox.Show("請輸入有效貸款年限", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!c) 
+            {
+                MessageBox.Show("請輸入有效房屋總價", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!d)
+            {
+                MessageBox.Show("請輸入有效自備款比例", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!ee)
+            {
+                MessageBox.Show("請輸入有效貸款利率", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (this.txtGracePeriod.Text == "" || double.Parse(this.txtGracePeriod.Text) < 0 )
             {
                 MessageBox.Show("寬限期須大於等於零", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -70,6 +104,7 @@ namespace s1131426房貸計算器
                 MessageBox.Show("貸款利率需介於0-100", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
 
             var grace = double.Parse(this.txtGracePeriod.Text)*12.0;
             var totalPrice = double.Parse(this.txtTotalPrice.Text);
@@ -226,6 +261,11 @@ namespace s1131426房貸計算器
 
         private void mortgageCalculator_Load(object sender, EventArgs e)
         {
+            SendMessage(txtTotalPrice.Handle, EM_SETCUEBANNER, 1, ">0");
+            SendMessage(txtSelfFund.Handle, EM_SETCUEBANNER, 1, "0-100");
+            SendMessage(txtLoanRate.Handle, EM_SETCUEBANNER, 1, "0-100");
+            SendMessage(txtLoanLimit.Handle, EM_SETCUEBANNER, 1, ">0");
+            SendMessage(txtGracePeriod.Handle, EM_SETCUEBANNER, 1, ">=0且<貸款年限");
 
         }
 

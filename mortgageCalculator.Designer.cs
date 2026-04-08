@@ -54,17 +54,17 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.txtMonthPay = new System.Windows.Forms.TextBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -131,7 +131,7 @@
             this.txtTotalPrice.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtTotalPrice.Location = new System.Drawing.Point(260, 38);
             this.txtTotalPrice.Name = "txtTotalPrice";
-            this.txtTotalPrice.Size = new System.Drawing.Size(242, 51);
+            this.txtTotalPrice.Size = new System.Drawing.Size(277, 51);
             this.txtTotalPrice.TabIndex = 5;
             this.txtTotalPrice.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -140,7 +140,7 @@
             this.txtLoanRate.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtLoanRate.Location = new System.Drawing.Point(260, 193);
             this.txtLoanRate.Name = "txtLoanRate";
-            this.txtLoanRate.Size = new System.Drawing.Size(242, 51);
+            this.txtLoanRate.Size = new System.Drawing.Size(277, 51);
             this.txtLoanRate.TabIndex = 6;
             // 
             // txtLoanLimit
@@ -148,7 +148,7 @@
             this.txtLoanLimit.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtLoanLimit.Location = new System.Drawing.Point(260, 269);
             this.txtLoanLimit.Name = "txtLoanLimit";
-            this.txtLoanLimit.Size = new System.Drawing.Size(242, 51);
+            this.txtLoanLimit.Size = new System.Drawing.Size(277, 51);
             this.txtLoanLimit.TabIndex = 7;
             this.txtLoanLimit.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -157,7 +157,7 @@
             this.txtGracePeriod.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtGracePeriod.Location = new System.Drawing.Point(260, 337);
             this.txtGracePeriod.Name = "txtGracePeriod";
-            this.txtGracePeriod.Size = new System.Drawing.Size(242, 51);
+            this.txtGracePeriod.Size = new System.Drawing.Size(277, 51);
             this.txtGracePeriod.TabIndex = 8;
             this.txtGracePeriod.TextChanged += new System.EventHandler(this.txtGracePeriod_TextChanged);
             // 
@@ -166,7 +166,7 @@
             this.txtSelfFund.Font = new System.Drawing.Font("微軟正黑體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtSelfFund.Location = new System.Drawing.Point(260, 112);
             this.txtSelfFund.Name = "txtSelfFund";
-            this.txtSelfFund.Size = new System.Drawing.Size(242, 51);
+            this.txtSelfFund.Size = new System.Drawing.Size(277, 51);
             this.txtSelfFund.TabIndex = 9;
             // 
             // txtTotalLoan
@@ -332,6 +332,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "每月應繳金額 (本 + 息)";
             // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label21.Location = new System.Drawing.Point(367, 88);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(66, 33);
+            this.label21.TabIndex = 35;
+            this.label21.Text = "TWD";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label20.Location = new System.Drawing.Point(453, 130);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(66, 33);
+            this.label20.TabIndex = 35;
+            this.label20.Text = "TWD";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label19.Location = new System.Drawing.Point(453, 66);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(66, 33);
+            this.label19.TabIndex = 35;
+            this.label19.Text = "TWD";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
+            // 
             // txtMonthPay
             // 
             this.txtMonthPay.Location = new System.Drawing.Point(119, 85);
@@ -344,7 +377,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.Location = new System.Drawing.Point(523, 48);
+            this.label7.Location = new System.Drawing.Point(543, 48);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 33);
             this.label7.TabIndex = 29;
@@ -402,44 +435,11 @@
             this.label18.TabIndex = 34;
             this.label18.Text = "TWD";
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label19.Location = new System.Drawing.Point(453, 66);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(66, 33);
-            this.label19.TabIndex = 35;
-            this.label19.Text = "TWD";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label20.Location = new System.Drawing.Point(453, 130);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(66, 33);
-            this.label20.TabIndex = 35;
-            this.label20.Text = "TWD";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label21.Location = new System.Drawing.Point(367, 88);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(66, 33);
-            this.label21.TabIndex = 35;
-            this.label21.Text = "TWD";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label22.Location = new System.Drawing.Point(523, 347);
+            this.label22.Location = new System.Drawing.Point(543, 347);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 33);
             this.label22.TabIndex = 35;
@@ -450,7 +450,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label23.Location = new System.Drawing.Point(523, 279);
+            this.label23.Location = new System.Drawing.Point(543, 279);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(49, 33);
             this.label23.TabIndex = 36;
@@ -460,7 +460,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label24.Location = new System.Drawing.Point(523, 199);
+            this.label24.Location = new System.Drawing.Point(543, 199);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(32, 33);
             this.label24.TabIndex = 37;
@@ -470,7 +470,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("標楷體", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label25.Location = new System.Drawing.Point(523, 122);
+            this.label25.Location = new System.Drawing.Point(543, 122);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(32, 33);
             this.label25.TabIndex = 38;
